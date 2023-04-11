@@ -5,20 +5,24 @@ using namespace std;
 
 class Solution {
 public:
-    bool isValid(string s) {
-        stack<char>st;
-        for(int i=0;i<s.length();i++)
+    string removeStars(string s) {
+        int n=s.length();
+        deque<char> f;
+        for(int i=0;i<n;i++)
         {
-            if(st.empty())
-            st.push(s[i]);
-            else if((s[i]== ')' && st.top()== '(' )|| (s[i]== '}' && st.top()== '{')||(s[i]== ']' && st.top()== '['))
-            st.pop();
+            if(s[i]=='*')
+            {
+               f.pop_back();
+            }
             else
-            st.push(s[i]);
+                f.push_back(s[i]);
         }
-        if(st.empty())
-        return 1;
-        else
-        return 0;
+        string p;
+        while(!f.empty())
+        {
+            p.push_back(f.front());
+            f.pop_front();
+        }
+        return p;
     }
 };
