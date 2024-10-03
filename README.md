@@ -6,9 +6,9 @@ Welcome to Hacktoberfest, a fantastic opportunity for students to engage with th
 ## How to Contribute:
 
 ### 1. **Get Started:**
-   ### 2. **Star the Repository:**
+   ## 2. **Star the Repository:**
      
-   ### 3. **Follow the Account:**
+   ## 3. **Follow the Account:**
     
 
 ### 2. **Fork the Repo**
