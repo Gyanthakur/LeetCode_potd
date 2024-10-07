@@ -1,31 +1,37 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-unordered_map<char, int> bracket = {{'(', 1}, {'{', 2}, {'[', 3}, {')', -1}, {'}', -2}, {']', -3}};
+// Map to associate brackets with their respective values
+unordered_map<char, int> bracket = {
+    {'(', 1}, {'{', 2}, {'[', 3},
+    {')', -1}, {'}', -2}, {']', -3}
+};
+
+// Function to check if the brackets in the string are balanced
 string isBalanced(string s) {   
-    stack<char> st;
-    for(char i:s){
-        if(bracket[i] > 0) {
-            st.push(i);
+    stack<char> st;    // Stack to keep track of opening brackets
+    for(char currentChar : s){   // Use a descriptive name for the loop variable
+        if(bracket[currentChar] > 0) {
+            st.push(currentChar);  // Push opening brackets onto the stack
         } else {
-            if(st.empty()) return "NO";
+            if(st.empty()) return "NO";  // No matching opening bracket
             char top = st.top();
             st.pop();
-            if(bracket[top] + bracket[i] != 0) {
-                return "NO";
+            // Check if the brackets match
+            if(bracket[top] + bracket[currentChar] != 0) {
+                return "NO";  // Mismatched brackets
             }
         }
     }
-    if(st.empty()) return "YES";
-    return "NO";
+    return st.empty() ? "YES" : "NO";   // Return YES if all brackets matched
 }
 
 int main() {
     int t;
-    cin >> t;
-    while(t--) {
+    cin >> t;  // Read number of test cases
+    while(t--) {  
         string s;
-        cin >> s;
-        cout << isBalanced(s) << endl;
+        cin >> s;  // Read the string of brackets
+        cout << isBalanced(s) << endl;  // Output the result
     }
 }
