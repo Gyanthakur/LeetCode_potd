@@ -1,5 +1,3 @@
-# Pull Request Template
-
 ## Description
 
 Please include a summary of the changes and the related issue(s) this pull request addresses. Include any relevant context or background information.
@@ -13,9 +11,6 @@ Use [ ] to represent an unchecked box.❌
 
 - [ ] Question Added
 - [ ] Solution Added
-- [ ] Bug fix
-- [ ] New feature
-- [ ] Documentation update
 - [ ] Other (please specify):
 
 ## How to Test
