@@ -1,4 +1,4 @@
-'''
+/*
 Minimum Add to Make Parentheses Valid
 Solved
 Medium
@@ -26,7 +26,7 @@ Constraints:
 1 <= s.length <= 1000
 s[i] is either '(' or ')'.
 
-'''
+*/
 
 class Solution {
 public:
