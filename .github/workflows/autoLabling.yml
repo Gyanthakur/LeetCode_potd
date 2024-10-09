@@ -54,7 +54,7 @@ jobs:
               console.log("No labels to add for Issues");
             }
 
-  label-prs: #labling
+  label-prs: #labling pr
     runs-on: ubuntu-latest
     outputs:
       label: ${{ steps.set-label.outputs.label }}
